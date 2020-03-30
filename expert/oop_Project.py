@@ -1,37 +1,36 @@
 import random
 
-class human :
+class Human :
     def __init__(self,name):
         self.name = name   
     
-    def get_name(self):
+    def GetName(self):
         return self.name
 
 names = ["mohsen","hosein","maziyar","akbar","nima","mehdi","farhad","mohamad","khashayar","milad","mostafa","amin","said","pooya","pooria","reza","ali","behzad","soheil","shahrooz","saman","behrooz"]
-random_names = random.sample(names, 22)
-list_of_humans = list() 
+randomNames = random.sample(names, 22)
+listOfHumans = list() 
 
-for name in random_names :
-    list_of_humans.append(human(name))
+for name in randomNames :
+    listOfHumans.append(Human(name))
 
-
-class footballist(human) :
+class SoccerPlayer(Human) :
        def __init__(self,name,team):
         self.name = name 
         self.team = team
         
 
-list_of_footballists = list()
-A_count=0
-B_count=0
+listOfSoccerPlayer = list()
+A_count = 0
+B_count = 0
 
 for i in range(0,22):
     if random.randint(0,1) == 0 and A_count <= 11:
-        list_of_footballists.append(footballist(list_of_humans[i].get_name(),"A"))
+        listOfSoccerPlayer.append(SoccerPlayer(listOfHumans[i].GetName(),"A"))
         A_count += 1
     else:
-        list_of_footballists.append(footballist(list_of_humans[i].get_name(),"B"))
+        listOfSoccerPlayer.append(SoccerPlayer(listOfHumans[i].GetName(),"B"))
         B_count += 1
         
-for item in list_of_footballists:
+for item in listOfSoccerPlayer:
     print(item.name, item.team)
