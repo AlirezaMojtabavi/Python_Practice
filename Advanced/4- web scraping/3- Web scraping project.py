@@ -47,7 +47,7 @@ length = len(listOfCars)
 ##/////////////////////////// INSERT IN TO DATABASE ////////////////////////////////////////////
 
 cnx = mysql.connector.connect(user = [type your user] , password = [type your password] ,
-                                host = [type your host]  , database = [type your database name] )
+                                    host = [type your host]  , database = [type your database name] )
 cursor = cnx.cursor()
 for i in range(1,length+1):
     cursor.execute('INSERT INTO [type your table's name] VALUES (\'%i\',\'%s\',\'%s\',\'%s\')' 
