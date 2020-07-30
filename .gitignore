@@ -130,5 +130,6 @@ dmypy.json
 *.rar
 *.zip
 myenv/
-Django/
-super_market/
+supermarket/
+*.sqlite
+
