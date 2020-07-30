@@ -20,8 +20,7 @@ while i !=20:
         maxNumberOfCOD = number
 
     elif codOfNumber < maxCOD :
-        maxCOD = maxCOD
-        maxNumberOfCOD = maxNumberOfCOD
+        pass
 
     elif codOfNumber == maxCOD :
         if number < maxNumberOfCOD:

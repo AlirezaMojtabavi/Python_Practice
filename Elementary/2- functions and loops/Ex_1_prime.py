@@ -5,7 +5,7 @@ for i in range(1,number):
     if number%i == 0:
         count+=1
     elif number%i != 0:
-        count = count
+        pass
 
 if count==1:
     print('prime')

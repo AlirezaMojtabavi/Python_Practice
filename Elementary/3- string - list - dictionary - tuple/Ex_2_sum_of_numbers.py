@@ -7,7 +7,7 @@ regularWordage = '1' * count_1 + '2' * count_2 + '3' * count_3
 
 for i in range(0,tool-1) :
     if i%2 == 0:
-        regularWordage = regularWordage[: i] + regularWordage[i :]
+        pass
     else:
         regularWordage = regularWordage[: i] + '+' + regularWordage[i :]
         

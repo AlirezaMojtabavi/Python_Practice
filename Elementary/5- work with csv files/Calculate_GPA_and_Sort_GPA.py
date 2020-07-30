@@ -39,7 +39,8 @@ def Calculate_Ascending_Average(input_file, output_file):
             for grade in row[1 :]:
                 grades.append(float(grade))
             ascendingAverage[name] = mean(grades)
-    ascendingAverage = {k: v for k, v in sorted(ascendingAverage.items(), key=lambda item: item[1])}
+
+    ascendingAverage = OrderedDict(sorted(ascendingAverage.items(), key = lambda k:k[1]))
     f.close()
 
     with open(output_file, 'w') as fout:
@@ -55,6 +56,7 @@ def Calculate_top_three_average(input_file, output_file):
 
     averages = OrderedDict()
     top_Three_Average = OrderedDict()
+    list_of_averages = list()
 
     with open(input_file,'r') as f:
         reader = csv.reader(f)
@@ -66,15 +68,11 @@ def Calculate_top_three_average(input_file, output_file):
             averages[name] = mean(grades)
     f.close()
 
-    averages = {k: v for k, v in sorted(averages.items(), key=lambda item: item[1], reverse=True)}
+    sorted_grades_dic = OrderedDict(sorted(averages.items(), key=lambda k: -k[1])) 
   
-    counter = 1
-    for k, v in averages.items():
-        if counter <= 3:
-            top_Three_Average[k] = v
-            counter += 1
-        else:
-            break
+    list_of_averages = list(sorted_grades_dic.items())
+    list_of_averages = list_of_averages[0:3]
+    top_Three_Average = OrderedDict(list_of_averages)
 
     with open(output_file, 'w') as fout:
         [fout.write('{0},{1}\n'.format(key, value)) for key, value in top_Three_Average.items()]

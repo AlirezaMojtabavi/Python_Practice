@@ -1,22 +1,23 @@
 string = str(input())
 string = ' ' + string + ' '
 
+vowels = ["a","A","e","E","i","I","o","O","u","U"]
+
 for letter in string:
-    if letter=='a' or letter=='A' or letter=='e' or letter=='E' or letter=='i' or letter=='I' or letter=='o' or letter=='O' or letter=='u' or letter=='U':
+    if letter in vowels:
         string = string[: string.index(letter)] + string[string.index(letter)+1 :]
 
 string = string.strip()
 
 ##--------------------------------------------------------------------------
 
-if string[0]!=".":
-    string = "." + string
+
 
 tool = len(string)
-for i in range(1,2*tool-2):
-    if string[i]=="." or string[i-1]=='.':
-        string = string[: i] + string[i :]
-    elif string[i]!="." and string[i-1]!=".":
+for i in range(0,2*tool-1):
+    if i%2 !=0:
+        pass
+    else:
         string =string[: i] + "." + string[i :]
 
 string = string.lower()
