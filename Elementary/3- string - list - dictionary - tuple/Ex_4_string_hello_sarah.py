@@ -9,7 +9,7 @@ for letter1 in word:
     else:
         word = word
 
-if (len(word) != length) and (len(word)>len("ello")):
+if (len(word) != length) and (len(word)>=len("ello")):
     length = len(word)
     for letter2 in word:
         if letter2 == "e":
@@ -20,7 +20,7 @@ if (len(word) != length) and (len(word)>len("ello")):
 else:
     flag = False
 
-if (len(word) != length) and (len(word)>len("llo")):
+if (len(word) != length) and (len(word)>=len("llo")):
     length = len(word)
     for letter3 in word:
         if letter3 == "l":
@@ -31,7 +31,7 @@ if (len(word) != length) and (len(word)>len("llo")):
 else:
     flag = False
 
-if (len(word) != length) and (len(word)>len("lo")):
+if (len(word) != length) and (len(word)>=len("lo")):
     length = len(word)
     for letter4 in word:
         if letter4 == "l":
@@ -42,7 +42,7 @@ if (len(word) != length) and (len(word)>len("lo")):
 else:
     flag = False
 
-if (len(word) != length) and (len(word)>len("o")):
+if (len(word) != length) and (len(word)>=len("o")):
     length = len(word)
     for letter5 in word:
         if letter5 == "o":
