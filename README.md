@@ -24,6 +24,6 @@ Then, these features stored in Database and finally using machine learning for p
 ## Django
 
 create trading application for super market.
-Class diagram represent below
+Class diagram represent below:
 
-![first_step test](Django/Class diagram.png)
+![first_step test](Django/ClassDiagram.png)
