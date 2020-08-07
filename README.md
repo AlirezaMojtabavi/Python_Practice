@@ -25,3 +25,5 @@ Then, these features stored in Database and finally using machine learning for p
 
 create trading application for super market.
 Class diagram represent below
+
+![first_step test](Python_Practice/Django/Class diagram.png)
