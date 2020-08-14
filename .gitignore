@@ -135,8 +135,8 @@ supermarket/
 *.sqlite
 =======
 *.sqlite
-Ex_1_Hello_World.py
-Ex_2_area
-Ex_6_age.py
+/Ex_1_Hello_World.py
+/Ex_2_area
+/Ex_6_age.py
 
 >>>>>>> 28e058a38617a97dbc951b7940b7d398a31f7869
